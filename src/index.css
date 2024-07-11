@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #101633; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Tambahkan CSS ini ke file CSS Anda atau gunakan styled-components di React */
+.hovered {
+  transition: all 0.3s ease-in-out;
+}
+
+.hovered:hover {
+  transform: scale(1.1); /* Atur faktor zoom sesuai kebutuhan */
+}
+
+.zoomed {
+  transition: all 0.3s ease-in-out;
+}
+
+.zoomed:hover {
+  transform: scale(1.1); /* Atur faktor zoom sesuai kebutuhan */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.previous,
+.next {
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  color: #ccc;
+}
+
+.active {
+  font-weight: bold;
+}
+
+/* Tambahan CSS dalam file Anda */
+@media (max-width: 640px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
